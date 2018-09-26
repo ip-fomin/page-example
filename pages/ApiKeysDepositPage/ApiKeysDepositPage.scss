@@ -1,0 +1,38 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.root-api-keys-deposit-page {
+  flex: 1 1 auto;
+  .api-keys-deposit-page {
+    @include flex(column, stretch, stretch);
+    flex: 1 1 auto;
+    position: relative;
+    .title {
+      color: $orange-medium;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 33px;
+      margin-bottom: 20px;
+    }
+    .descriptions {
+      @include flex(column, flex-start, flex-start);
+      margin-bottom: 40px;
+      .description {
+        color: $white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 22px;
+        >.allotted {
+          color: $orange-medium;
+          font-weight: 700;
+        }
+      }
+    }
+    .deposit-row {
+      margin-bottom: 40px;
+    }
+    .next-button {
+      width: 160px;
+    }
+  }
+}

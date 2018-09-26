@@ -1,0 +1,20 @@
+<div class="root-api-keys-setup-page">
+  <div class="api-keys-setup-page">
+    <div class="image left">
+      <img src="/static/img/pointers-4.png">
+    </div>
+    <div class="image">
+      <img src="/static/img/pointers-4.png">
+    </div>
+    <div class="container">
+      <router-link to="/" class="logo" src="/static/img/exchange-logo.svg" tag="img"></router-link>
+      <div class="navigation">
+        <action-item back purple :title="Back" @click="$router.back()"></action-item>
+        <div class="pages">
+          <div class="page" :class="{'active': $route.path === step.path}" v-for="step in STEPS" :key="step.path">{{ step.step }}</div>
+        </div>
+      </div>
+      <router-view class="child-view" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.root-api-keys-setup-page {
+  flex: 1 1 auto;
+  width: 100%;
+  .api-keys-setup-page {
+    @include flex(column, stretch, stretch);
+    flex: 1 1 auto;
+    width: 100%;
+    position: relative;
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-width: 1163px;
+      max-height: 575px;
+      z-index: -1;
+      > img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+      }
+      &.left {
+        top: -150px;
+        left: -5px;
+        right: auto;
+        z-index: -2;
+        opacity: .6;
+      }
+    }
+    .container {
+      @include flex(column, stretch, flex-start);
+      width: 900px;
+      margin-top: 135px;
+      margin-left: 320px;
+      .logo {
+        cursor: pointer;
+        height: 78px;
+        width: 228px;
+      }
+      .navigation {
+        @include flex(row, flex-start, center);
+        margin-top: 60px;
+        .pages {
+          @include flex(row, flex-start, center);
+          margin-left: 55px;
+          .page {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            user-select: none;
+            color: $orange-medium;
+            &.active {
+              color: $white;
+              border-radius: 50%;
+              background-color: $orange-medium;
+            }
+          }
+        }
+      }
+      .child-view {
+        padding: 40px 0 0 95px;
+      }
+    }
+  }
+}

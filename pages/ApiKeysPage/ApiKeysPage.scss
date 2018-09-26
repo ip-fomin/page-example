@@ -1,0 +1,17 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.root-api-keys-page {
+  @include flex(column, stretch, stretch);
+  flex: 1 1 auto;
+  .api-keys-page {
+    @include flex(column, stretch, stretch);
+    flex: 1 1 auto;
+    position: relative;
+    .view {
+      @include flex(column, stretch, stretch);
+      flex: 1 1 auto;
+      position: relative;
+    }
+  }
+}

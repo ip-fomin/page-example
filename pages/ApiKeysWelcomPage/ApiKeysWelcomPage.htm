@@ -1,0 +1,23 @@
+<div class="root-api-keys-welcom-page">
+  <div class="api-keys-welcom-page">
+    <div class="image">
+      <img src="/static/img/pointers-4.png">
+    </div>
+    <div class="container">
+      <router-link to="/" class="logo" src="/static/img/exchange-logo.svg" tag="img"></router-link>
+      <div class="content">
+        <div class="welcom-title">
+          <span>Welcom</span> 
+          <span>to TimeX Exchange!</span>
+        </div>
+        <div class="generate-title">Some generate text title</div>
+        <div class="generate-description">Some generate text description</div>
+        <div class="controls">
+          <button-item class="button" @click="$router.push('/api-keys/setup')">Yes</button-item>
+          <button-item transparent class="button" @click="$router.push('/main')">No</button-item>
+          <action-item transparentBordered help class="item" :title="Help" @click="showHelp"></action-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
